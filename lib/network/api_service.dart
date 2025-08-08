@@ -6,7 +6,7 @@ part 'api_service.g.dart';
 
 @RestApi(baseUrl: "https://68918ec9447ff4f11fbce342.mockapi.io/")
 abstract class ApiService{
-  factory ApiService(Dio dio, {String? baseUrl}) = _ApiService;
+  factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
   @GET("student")
   Future<List<StudentModel>> getAllStudent();
