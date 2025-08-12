@@ -1,3 +1,4 @@
+import 'package:bloc_rest_api/bloc/get/get_student_cubit.dart';
 import 'package:bloc_rest_api/network/api_service.dart';
 import 'package:bloc_rest_api/repository/student_repository.dart';
 import 'package:dio/dio.dart';
@@ -13,4 +14,7 @@ void locator(){
 
   StudentRepository studentRepository = StudentRepository(getIt.call());
   getIt.registerLazySingleton(() => studentRepository);
+
+  GetStudentCubit studentCubit = GetStudentCubit(getIt.call());
+  getIt.registerLazySingleton(() => studentCubit);
 }

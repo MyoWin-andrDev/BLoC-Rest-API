@@ -14,7 +14,7 @@ class GetStudentCubit extends Cubit<GetStudentState> {
   void getAllStudent(){
     emit(GetStudentInitial());
     _studentRepository.getAllStudent()
-    .then((value) => 
+    .then((value) =>
       emit(GetStudentSuccess(value))
     )
     .catchError((e) => 
